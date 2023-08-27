@@ -46,18 +46,22 @@ table {
 }
 
 body  {
-    background-color: #1D4739;
-    height: 80vh;
+    background-image: url('forest.jpg');
+    height: 100vh;
     padding: 1em;
+}
+*{
+	box-sizing: border-box;
 }
 
 /*Main*/
 main{
+	
 	display: flex;
 	flex-direction: column;
-    background-color: #CCCCCC90;
-    min-height: 100%;
+    background-color: #cccccce7;
     border-radius: 20px;
+	height: 80%;
     padding: 2em;
 	border: 1px #ffd90071 solid;
 }
@@ -80,10 +84,7 @@ h1{
 	text-align: center;
 }
 
-span{ 
-	text-align: center;
-	display: block;
-}
+
 /* About me  */
 .about{
 	justify-content: space-around;
@@ -102,17 +103,8 @@ main div{
 	display: flex;
 }
 
-/* inside container on homepage */
-main div div{
-border: 1px #ffd90071 solid;
-background-color: #1D4739;
-padding: 6em;
-border-radius: 20%;}
-/* inside container anchortags on homepage */
-div a{
-	text-decoration: none;
-	color: #ccccccde;
-}
+
+
  /* contact page */
  ul{
 margin: 2em 0;
@@ -122,4 +114,27 @@ flex-direction: column;
 justify-content: space-around;
 align-items: center;
 height: 20em;
+
  }
+ /* button */
+ .button{
+	padding: 1em;
+	border: 1px #ffd900ab solid;
+	background-color: #1d4739d3;
+	border-radius: 6px;
+	transition:all 0.5s ease-in-out
+ }
+ 
+ a > .button:only-child{
+	color:  #cccccc;
+ }
+
+a > .button:only-child:hover{
+	 color: #1D4739;
+}
+.button:hover{
+	background-color:#ffd90052;
+	border: 1px #1D4739 solid;
+	border-radius: 10%;
+}
+
