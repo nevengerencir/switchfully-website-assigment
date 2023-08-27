@@ -3,13 +3,13 @@
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
+del, dfn, rem, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
+article, aside, canvas, details, rembed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
@@ -46,9 +46,11 @@ table {
 }
 
 body  {
-    background-image: url('forest.jpg');
-    height: 100vh;
-    padding: 1em;
+	background: url('forest.jpg') no-repeat center center fixed; 
+	background-size:cover;
+	background-repeat: no-repeat;
+	padding: 2rem;
+   
 }
 *{
 	box-sizing: border-box;
@@ -58,14 +60,17 @@ body  {
 main{
 	
 	display: flex;
-	flex-direction: column;
+	flex-direction: column; 
+	align-items: center;
     background-color: #cccccce7;
     border-radius: 20px;
-	height: 80%;
-    padding: 2em;
+    padding: 2rem;
 	border: 1px #ffd90071 solid;
 }
 /* Text  */
+html{
+	font-size: 16px;
+}
 a{
 	text-decoration: none;
 }
@@ -73,14 +78,15 @@ h1,p,a{
 	color: #1D4739;
 }
 p,a{
-	font-size: 1.5em;
+	font-size: 1.5rem;
 }
 p{
-    line-height: 1.4em;
-	width: 70%;	 
+	width: 70%;
+    line-height: 2rem;
+	padding: 3rem;
 }
 h1{
-	font-size: 3em;
+	font-size: 3rem;
 	text-align: center;
 }
 
@@ -88,8 +94,7 @@ h1{
 /* About me  */
 .about{
 	justify-content: space-around;
-	padding-top: 1em;
-	margin: 2em 0 ;
+	padding: 4rem 8rem;
 	display: flex;
 	justify-content: space-between;
 }
@@ -97,32 +102,38 @@ h1{
 
 
 /* main container */
-main div{  
-	margin-top: 2em;
-	justify-content: space-around;
+.homepagecontainer{
+	width: 20rem;
+	padding: 8rem 0;
+	height: 50vh;
 	display: flex;
+	 justify-content:space-around
 }
+.buttoncontainer{ 
+width: auto;}
 
 
 
  /* contact page */
  ul{
-margin: 2em 0;
 list-style-type: disc;
 display: flex;
 flex-direction: column;
 justify-content: space-around;
 align-items: center;
-height: 20em;
+height: 20rem;
 
  }
  /* button */
- .button{
-	padding: 1em;
+ .button{ 
+	text-align: center;
+	 height: 4rem;
+	padding: 1rem;
 	border: 1px #ffd900ab solid;
 	background-color: #1d4739d3;
 	border-radius: 6px;
-	transition:all 0.5s ease-in-out
+	transition:all 0.5s ease-in-out;
+	
  }
  
  a > .button:only-child{
@@ -137,4 +148,24 @@ a > .button:only-child:hover{
 	border: 1px #1D4739 solid;
 	border-radius: 10%;
 }
+img{
+	align-self: center;
+	height: 30rem;
+}
+@media (max-width: 1250px) {
+	html{
+		font-size: 14px;
+	}
+	.about{
+		justify-content: center;
+		flex-direction: column;
+	}
+	p{
+		padding: 4rem 0 0 0;
+		line-height: 2.5rem;
+		width: 100%;
+	}
+
+
+  }
 
